@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: demo
+  liquibase:
+    contexts: ${spring.profiles.active}
+    liquibase-schema: liquibase
+    change-log: classpath:/changelog/db.changelog-master.yaml
+    enabled: true
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: true
+  banner:
+    location:
+      banner/logo.txt
+  profiles:
+    active: docker
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      jdbcUrl: jdbc:postgresql://localhost:5430/demo
+      username: postgres
+      password: admin
+      maximum-pool-size: 10
+      minimum-idle: 5
+
+springdoc:
+  show-actuator: true
+  swagger-ui:
+    enabled: true
+#    url: /v3/api-docs
+
+server:
+  port: 8011
+
+users:
+  admin:
+    name: admin
+    password: admin
+  editor:
+    name: editor
+    password: editor
