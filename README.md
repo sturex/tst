@@ -13,4 +13,4 @@ Additionally, you are required to develop an endpoint for statistics that would 
 
 Please also write tests to verify that your code works.
 
-## Please kindly note that this code was written in just 3 hours, as required by the employer.
+## Please kindly note that this code was written in just 3 hours, as required by the employer
